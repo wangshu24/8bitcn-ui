@@ -23,8 +23,10 @@ export function SiteHeader() {
   return (
     <header className="flex h-14 shrink-0 items-center gap-2 border-b border-dashed">
       <div className="flex w-full items-center gap-1 px-4 lg:gap-2 lg:px-6 max-w-screen-xl mx-auto border-dashed border-l border-r">
-        <Image src="/8bitcn.png" alt="logo" width={32} height={32} />{" "}
-        <p className="hidden font-bold lg:inline-block">8bitcn/ui</p>
+        <Link href="/" className="flex items-center gap-2">
+          <Image src="/8bitcn.png" alt="logo" width={32} height={32} />{" "}
+          <p className="hidden font-bold lg:inline-block">8bitcn/ui</p>
+        </Link>
         <Separator
           orientation="vertical"
           className="mx-2 data-[orientation=vertical]:h-4"
