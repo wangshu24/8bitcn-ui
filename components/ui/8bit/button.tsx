@@ -10,7 +10,7 @@ const pressStart = Press_Start_2P({
   subsets: ["latin"],
 });
 
-const buttonVariants = cva("", {
+export const buttonVariants = cva("", {
   variants: {
     variant: {
       default: "bg-foreground",
