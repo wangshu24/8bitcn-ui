@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "8bit",
+  "homepage": "https://8bitcn.com",
+  "items": [
+    {
+      "name": "8bit-button",
+      "type": "registry:component",
+      "title": "8-bit Button",
+      "description": "A simple 8-bit button component",
+      "registryDependencies": ["button"],
+      "files": [
+        {
+          "path": "registry/8bit/button.tsx",
+          "type": "registry:component"
+        }
+      ]
+    }
+  ]
+}
