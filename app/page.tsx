@@ -9,7 +9,7 @@ export default function Home() {
         A set of 8-bit styled components and a code distribution platform. Works
         with your favorite frameworks. Open Source. Open Code.
       </p>
-      <Link href="/components/button">
+      <Link href="/components/button" className="w-fit">
         <Button className="w-fit">Get Started</Button>
       </Link>
     </div>
