@@ -4,6 +4,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { SiteHeader } from "@/components/site-header";
 import SiteFooter from "@/components/site-footer";
+import { Analytics } from "@vercel/analytics/react";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -39,6 +40,7 @@ export default function RootLayout({
           <SiteHeader />
           <div className="flex-1">{children}</div>
           <SiteFooter />
+          <Analytics />
         </ThemeProvider>
       </body>
     </html>
