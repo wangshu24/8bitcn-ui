@@ -6,7 +6,7 @@ import Link from "next/link";
 const navItems = [
   {
     label: "Components",
-    href: "/components",
+    href: "/components/button",
   },
   {
     label: "Docs",
