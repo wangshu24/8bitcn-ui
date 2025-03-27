@@ -38,7 +38,9 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <SiteHeader />
-          <div className="flex-1">{children}</div>
+          <div className="flex-1 border-l border-r border-dashed max-w-[1400px] mx-auto w-full">
+            {children}
+          </div>
           <SiteFooter />
           <Analytics />
         </ThemeProvider>
