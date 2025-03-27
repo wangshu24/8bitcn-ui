@@ -5,6 +5,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 import { SiteHeader } from "@/components/site-header";
 import SiteFooter from "@/components/site-footer";
 import { Analytics } from "@vercel/analytics/react";
+import { Toaster } from "sonner";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -42,6 +43,7 @@ export default function RootLayout({
             {children}
           </div>
           <SiteFooter />
+          <Toaster />
           <Analytics />
         </ThemeProvider>
       </body>

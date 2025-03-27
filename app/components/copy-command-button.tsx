@@ -2,6 +2,8 @@
 
 import { Terminal } from "lucide-react";
 
+import { toast } from "sonner";
+
 import { Button } from "@/components/ui/button";
 
 interface CopyCommandButtonProps {
@@ -15,6 +17,7 @@ export default function CopyCommandButton({
 }: CopyCommandButtonProps) {
   const copy = () => {
     navigator.clipboard.writeText(copyCommand);
+    toast("Command copied to clipboard");
   };
 
   return (
