@@ -1,6 +1,5 @@
 import Image from "next/image";
 
-import { Separator } from "@/components/ui/separator";
 import { ModeToggle } from "@/components/mode-toggle";
 import Link from "next/link";
 
