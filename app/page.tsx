@@ -5,7 +5,7 @@ export default function Home() {
     <div className="flex flex-col items-center justify-center p-4 md:p-24 gap-5 text-center">
       <h1>8-bitcn/ui</h1>
       <p>A collection of 8-bit styled components for your next project.</p>
-      <Button>Get Started</Button>
+      <Button>8bitcn/ui</Button>
     </div>
   );
 }
