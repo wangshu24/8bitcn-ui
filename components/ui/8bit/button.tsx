@@ -49,16 +49,16 @@ export default function Button({ children, ...props }: BitButtonProps) {
       {variant !== "ghost" && variant !== "link" && (
         <>
           {/* Pixelated border */}
-          <div className="absolute -top-1.5 w-1/2 left-1.5 h-1.5 bg-foreground" />
-          <div className="absolute -top-1.5 w-1/2 right-1.5 h-1.5 bg-foreground" />
-          <div className="absolute -bottom-1.5 w-1/2 left-1.5 h-1.5 bg-foreground" />
-          <div className="absolute -bottom-1.5 w-1/2 right-1.5 h-1.5 bg-foreground" />
-          <div className="absolute top-0 left-0 size-1.5 bg-foreground" />
-          <div className="absolute top-0 right-0 size-1.5 bg-foreground" />
-          <div className="absolute bottom-0 left-0 size-1.5 bg-foreground" />
-          <div className="absolute bottom-0 right-0 size-1.5 bg-foreground" />
-          <div className="absolute top-1.5 -left-1.5 h-2/3 w-1.5 bg-foreground" />
-          <div className="absolute top-1.5 -right-1.5 h-2/3 w-1.5 bg-foreground" />
+          <div className="absolute -top-1.5 w-1/2 left-1.5 h-1.5 bg-ring" />
+          <div className="absolute -top-1.5 w-1/2 right-1.5 h-1.5 bg-ring" />
+          <div className="absolute -bottom-1.5 w-1/2 left-1.5 h-1.5 bg-ring" />
+          <div className="absolute -bottom-1.5 w-1/2 right-1.5 h-1.5 bg-ring" />
+          <div className="absolute top-0 left-0 size-1.5 bg-ring" />
+          <div className="absolute top-0 right-0 size-1.5 bg-ring" />
+          <div className="absolute bottom-0 left-0 size-1.5 bg-ring" />
+          <div className="absolute bottom-0 right-0 size-1.5 bg-ring" />
+          <div className="absolute top-1.5 -left-1.5 h-2/3 w-1.5 bg-ring" />
+          <div className="absolute top-1.5 -right-1.5 h-2/3 w-1.5 bg-ring" />
 
           {variant !== "outline" && (
             <>
