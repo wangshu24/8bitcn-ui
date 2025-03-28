@@ -5,7 +5,6 @@ import { Menu } from "lucide-react";
 
 import { pressStart } from "@/config/fonts";
 
-import { ModeToggle } from "@/components/mode-toggle";
 import {
   Drawer,
   DrawerContent,
@@ -14,6 +13,7 @@ import {
   DrawerTrigger,
 } from "@/components/ui/drawer";
 import { Button } from "./ui/button";
+import { ModeSwitcher } from "./mode-switcher";
 
 const navItems = [
   {
@@ -79,7 +79,7 @@ export function SiteHeader() {
           ))}
         </nav>
         <div className="ml-auto flex items-center gap-2">
-          <ModeToggle />
+          <ModeSwitcher />
           <Link href="https://github.com/TheOrcDev/8bitcn-ui" target="_blank">
             <Button size="icon" variant="ghost">
               <svg
