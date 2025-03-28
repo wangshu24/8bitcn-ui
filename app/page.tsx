@@ -1,12 +1,8 @@
 import Link from "next/link";
-import { Press_Start_2P } from "next/font/google";
+
+import { pressStart } from "@/config/fonts";
 
 import Button from "@/components/ui/8bit/button";
-
-const pressStart = Press_Start_2P({
-  weight: ["400"],
-  subsets: ["latin"],
-});
 
 export default function Home() {
   return (
