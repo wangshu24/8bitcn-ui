@@ -20,6 +20,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Build your retro library - 8bitcn/ui",
   description: "A collection of 8-bit styled components for your next project.",
+  openGraph: {
+    images: "/images/8bitcn-orc.jpg",
+  },
 };
 
 export default function RootLayout({
