@@ -1,7 +1,13 @@
+import { Press_Start_2P } from "next/font/google";
 import Image from "next/image";
 
 import { ModeToggle } from "@/components/mode-toggle";
 import Link from "next/link";
+
+const pressStart = Press_Start_2P({
+  weight: ["400"],
+  subsets: ["latin"],
+});
 
 const navItems = [
   {
@@ -24,7 +30,11 @@ export function SiteHeader() {
       <div className="flex w-full items-center h-full gap-1 px-4 lg:gap-5 lg:px-6 max-w-[1400px] mx-auto border-dashed border-l border-r">
         <Link href="/" className="flex items-center gap-2">
           <Image src="/8bitcn.png" alt="logo" width={32} height={32} />{" "}
-          <p className="hidden font-bold lg:inline-block">8bitcn/ui</p>
+          <p
+            className={`${pressStart.className} hidden font-bold lg:inline-block text-xs`}
+          >
+            8bitcn/ui
+          </p>
         </Link>
 
         <nav className="hidden lg:flex items-center gap-4">
