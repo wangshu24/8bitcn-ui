@@ -1,9 +1,18 @@
 import Image from "next/image";
 import Link from "next/link";
 
+import { Menu } from "lucide-react";
+
 import { pressStart } from "@/config/fonts";
 
 import { ModeToggle } from "@/components/mode-toggle";
+import {
+  Drawer,
+  DrawerContent,
+  DrawerHeader,
+  DrawerTitle,
+  DrawerTrigger,
+} from "@/components/ui/drawer";
 import { Button } from "./ui/button";
 
 const navItems = [
@@ -24,17 +33,41 @@ const navItems = [
 export function SiteHeader() {
   return (
     <header className="flex sticky top-0 z-50 h-14 shrink-0 items-center gap-2 border-b border-dashed bg-background/95">
-      <div className="flex w-full items-center h-full gap-1 px-4 lg:gap-5 lg:px-6 max-w-[1400px] mx-auto border-dashed border-l border-r">
-        <Link href="/" className="flex items-center gap-2">
+      <div className="flex w-full items-center h-full gap-1 px-4 md:gap-5 md:px-6 max-w-[1400px] mx-auto border-dashed border-l border-r">
+        <Link href="/" className="hidden md:flex items-center gap-2">
           <Image src="/8bitcn.png" alt="logo" width={32} height={32} />{" "}
           <h2
-            className={`${pressStart.className} hidden font-bold lg:inline-block text-xs`}
+            className={`${pressStart.className} hidden font-bold md:inline-block text-xs`}
           >
             8bitcn/ui
           </h2>
         </Link>
 
-        <nav className="hidden lg:flex items-center gap-4">
+        <div className="block md:hidden">
+          <Drawer>
+            <DrawerTrigger asChild>
+              <Button variant="ghost" size="icon">
+                <Menu />
+              </Button>
+            </DrawerTrigger>
+            <DrawerContent className="h-3/4">
+              <DrawerHeader>
+                <DrawerTitle>8bitcn/ui</DrawerTitle>
+                {navItems.map((item) => (
+                  <Link
+                    href={item.href}
+                    key={item.href}
+                    className="text-2xl font-extralight"
+                  >
+                    {item.label}
+                  </Link>
+                ))}
+              </DrawerHeader>
+            </DrawerContent>
+          </Drawer>
+        </div>
+
+        <nav className="hidden md:flex items-center gap-4">
           {navItems.map((item) => (
             <Link
               href={item.href}
