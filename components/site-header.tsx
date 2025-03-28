@@ -3,6 +3,7 @@ import Link from "next/link";
 
 import { Menu } from "lucide-react";
 
+import { navItems } from "@/config/nav-items";
 import { pressStart } from "@/config/fonts";
 
 import {
@@ -12,23 +13,8 @@ import {
   DrawerTitle,
   DrawerTrigger,
 } from "@/components/ui/drawer";
-import { Button } from "./ui/button";
-import { ModeSwitcher } from "./mode-switcher";
-
-const navItems = [
-  {
-    label: "Components",
-    href: "/components/button",
-  },
-  {
-    label: "Docs",
-    href: "/docs",
-  },
-  {
-    label: "About",
-    href: "/about",
-  },
-];
+import { Button } from "@/components/ui/button";
+import { ModeSwitcher } from "@/components/mode-switcher";
 
 export function SiteHeader() {
   return (
@@ -52,15 +38,33 @@ export function SiteHeader() {
             </DrawerTrigger>
             <DrawerContent className="h-3/4">
               <DrawerHeader>
-                <DrawerTitle>8bitcn/ui</DrawerTitle>
-                {navItems.map((item) => (
-                  <Link
-                    href={item.href}
-                    key={item.href}
-                    className="text-2xl font-extralight"
-                  >
-                    {item.label}
-                  </Link>
+                <div className="flex flex-col gap-2">
+                  {navItems.header.map((item) => (
+                    <Link
+                      href={item.href}
+                      key={item.href}
+                      className="text-2xl font-extralight"
+                    >
+                      {item.label}
+                    </Link>
+                  ))}
+                </div>
+
+                {navItems.navMain.map((navItem) => (
+                  <div key={navItem.title} className="flex flex-col gap-2 pt-4">
+                    <DrawerTitle className="text-xl">
+                      {navItem.title}
+                    </DrawerTitle>
+                    {navItem.items.map((item) => (
+                      <Link
+                        href={item.url}
+                        key={item.title}
+                        className="text-xl font-extralight text-muted-foreground"
+                      >
+                        {item.title}
+                      </Link>
+                    ))}
+                  </div>
                 ))}
               </DrawerHeader>
             </DrawerContent>
@@ -68,7 +72,7 @@ export function SiteHeader() {
         </div>
 
         <nav className="hidden md:flex items-center gap-4">
-          {navItems.map((item) => (
+          {navItems.header.map((item) => (
             <Link
               href={item.href}
               key={item.href}
