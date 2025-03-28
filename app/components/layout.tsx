@@ -10,12 +10,12 @@ interface LayoutProps {
 export default function Layout({ children }: LayoutProps) {
   return (
     <main className="relative flex gap-4 p-4">
-      <SidebarProvider className="w-max">
+      <SidebarProvider className="w-max hidden md:block">
         <AppSidebar className="absolute top-0 left-0 " />
         <SidebarTrigger className="md:hidden" />
       </SidebarProvider>
 
-      <div className="flex-1 px-10 py-4">{children}</div>
+      <div className="flex-1 px-4 py-4">{children}</div>
     </main>
   );
 }

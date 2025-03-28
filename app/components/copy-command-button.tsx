@@ -21,8 +21,8 @@ export default function CopyCommandButton({
   };
 
   return (
-    <Button variant="outline" onClick={copy}>
-      <Terminal className="size-4" /> {command}
+    <Button variant="outline" onClick={copy} className="text-xs md:text-sm">
+      <Terminal className="size-3 md:size-4" /> {command}
     </Button>
   );
 }
