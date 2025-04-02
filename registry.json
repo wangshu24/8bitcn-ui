@@ -12,7 +12,8 @@
       "files": [
         {
           "path": "registry/8bit/button.tsx",
-          "type": "registry:component"
+          "type": "registry:component",
+          "target": "components/ui/8bit/button.tsx"
         }
       ]
     },
@@ -25,7 +26,8 @@
       "files": [
         {
           "path": "registry/8bit/input.tsx",
-          "type": "registry:component"
+          "type": "registry:component",
+          "target": "components/ui/8bit/input.tsx"
         }
       ]
     }
