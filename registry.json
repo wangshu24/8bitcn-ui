@@ -4,14 +4,27 @@
   "homepage": "https://8bitcn.com",
   "items": [
     {
-      "name": "8bit-button",
+      "name": "8bit-input",
       "type": "registry:component",
-      "title": "8-bit Button",
-      "description": "A simple 8-bit button component",
-      "registryDependencies": ["button"],
+      "title": "8-bit Input",
+      "description": "A simple 8-bit input component",
+      "registryDependencies": ["input"],
       "files": [
         {
           "path": "registry/8bit/button.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "8bit-input",
+      "type": "registry:component",
+      "title": "8-bit Input",
+      "description": "A simple 8-bit input component",
+      "registryDependencies": ["input"],
+      "files": [
+        {
+          "path": "registry/8bit/input.tsx",
           "type": "registry:component"
         }
       ]

@@ -12,6 +12,10 @@ const pressStart = Press_Start_2P({
 
 export const buttonVariants = cva("", {
   variants: {
+    font: {
+      normal: "",
+      retro: pressStart.className,
+    },
     variant: {
       default: "bg-foreground",
       destructive: "bg-foreground",
@@ -40,14 +44,14 @@ export interface BitButtonProps
 }
 
 export default function Button({ children, ...props }: BitButtonProps) {
-  const { variant, size, className } = props;
+  const { variant, size, className, font } = props;
 
   return (
     <ShadcnButton
       {...props}
       className={cn(
         "rounded-none active:translate-y-1 transition-transform relative",
-        pressStart.className,
+        font !== "normal" && pressStart.className,
         className
       )}
       size={size}
