@@ -22,12 +22,10 @@ export const navItems = {
                 {
                     title: "Button",
                     url: "/components/button",
-                    isActive: true,
                 },
                 {
                     title: "Input",
                     url: "/components/input",
-                    isActive: false,
                 },
             ],
         },
