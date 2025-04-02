@@ -1,10 +1,10 @@
 "use client";
 
-import { SidebarMenuItem } from "./ui/sidebar";
-
-import React from "react";
-import { SidebarMenuButton } from "./ui/sidebar";
 import { usePathname } from "next/navigation";
+import Link from "next/link";
+
+import { SidebarMenuItem } from "./ui/sidebar";
+import { SidebarMenuButton } from "./ui/sidebar";
 
 type SidebarItemProps = {
   item: {
@@ -20,7 +20,7 @@ export default function SidebarItem({ item }: SidebarItemProps) {
   return (
     <SidebarMenuItem key={item.title}>
       <SidebarMenuButton asChild isActive={isActive}>
-        <a href={item.url}>{item.title}</a>
+        <Link href={item.url}>{item.title}</Link>
       </SidebarMenuButton>
     </SidebarMenuItem>
   );
