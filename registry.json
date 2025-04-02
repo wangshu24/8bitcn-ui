@@ -30,6 +30,20 @@
           "target": "components/ui/8bit/input.tsx"
         }
       ]
+    },
+    {
+      "name": "8bit-badge",
+      "type": "registry:component",
+      "title": "8-bit Badge",
+      "description": "A simple 8-bit badge component",
+      "registryDependencies": ["badge"],
+      "files": [
+        {
+          "path": "registry/8bit/badge.tsx",
+          "type": "registry:component",
+          "target": "components/ui/8bit/badge.tsx"
+        }
+      ]
     }
   ]
 }

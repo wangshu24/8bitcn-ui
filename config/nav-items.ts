@@ -20,6 +20,10 @@ export const navItems = {
             url: "/components/button",
             items: [
                 {
+                    title: "Badge",
+                    url: "/components/badge",
+                },
+                {
                     title: "Button",
                     url: "/components/button",
                 },
