@@ -44,6 +44,20 @@
           "target": "components/ui/8bit/badge.tsx"
         }
       ]
+    },
+    {
+      "name": "8bit-textarea",
+      "type": "registry:component",
+      "title": "8-bit Textarea",
+      "description": "A simple 8-bit textarea component",
+      "registryDependencies": ["textarea"],
+      "files": [
+        {
+          "path": "registry/8bit/textarea.tsx",
+          "type": "registry:component",
+          "target": "components/ui/8bit/textarea.tsx"
+        }
+      ]
     }
   ]
 }
