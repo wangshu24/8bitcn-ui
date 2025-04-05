@@ -28,13 +28,13 @@ export const badgeVariants = cva("", {
   },
 });
 
-export interface BitButtonProps
-  extends React.ButtonHTMLAttributes<HTMLButtonElement>,
+export interface BitBadgeProps
+  extends React.ComponentProps<"span">,
     VariantProps<typeof badgeVariants> {
   asChild?: boolean;
 }
 
-function Badge({ children, ...props }: BitButtonProps) {
+function Badge({ children, ...props }: BitBadgeProps) {
   const { variant, className, font } = props;
 
   return (
