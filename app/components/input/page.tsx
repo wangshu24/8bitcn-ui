@@ -28,7 +28,7 @@ export default function InputPage() {
           </div>
         </div>
         <div className="flex items-center justify-center min-h-[400px] max-w-md mx-auto relative">
-          <Input />
+          <Input placeholder="Enter text" />
         </div>
       </div>
     </div>
