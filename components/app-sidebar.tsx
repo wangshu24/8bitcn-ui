@@ -9,7 +9,6 @@ import {
   SidebarGroupContent,
   SidebarGroupLabel,
   SidebarMenu,
-  SidebarRail,
 } from "@/components/ui/sidebar";
 import SidebarItem from "./sidebar-item";
 
@@ -30,7 +29,6 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
           </SidebarGroup>
         ))}
       </SidebarContent>
-      <SidebarRail />
     </Sidebar>
   );
 }
