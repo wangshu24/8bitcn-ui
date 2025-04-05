@@ -8,8 +8,8 @@ import {
 } from "@/components/ui/8bit/card";
 import { OpenInV0Button } from "../open-in-v0-button";
 import CopyCommandButton from "../copy-command-button";
-import Input from "@/components/ui/8bit/input";
-import Button from "@/components/ui/8bit/button";
+import { Input } from "@/components/ui/8bit/input";
+import { Button } from "@/components/ui/8bit/button";
 
 export default function TextareaPage() {
   return (

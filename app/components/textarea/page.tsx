@@ -1,4 +1,4 @@
-import Textarea from "@/components/ui/8bit/textarea";
+import { Textarea } from "@/components/ui/8bit/textarea";
 import { OpenInV0Button } from "../open-in-v0-button";
 import CopyCommandButton from "../copy-command-button";
 

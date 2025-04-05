@@ -28,7 +28,7 @@ export interface BitTextareaProps
   asChild?: boolean;
 }
 
-export default function Textarea({ ...props }: BitTextareaProps) {
+function Textarea({ ...props }: BitTextareaProps) {
   const { className, font } = props;
 
   return (
@@ -51,3 +51,5 @@ export default function Textarea({ ...props }: BitTextareaProps) {
     </div>
   );
 }
+
+export { Textarea };

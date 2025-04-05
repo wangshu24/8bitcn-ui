@@ -1,4 +1,4 @@
-import Badge from "@/components/ui/8bit/badge";
+import { Badge } from "@/components/ui/8bit/badge";
 import { OpenInV0Button } from "../open-in-v0-button";
 import CopyCommandButton from "../copy-command-button";
 

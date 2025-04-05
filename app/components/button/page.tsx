@@ -1,4 +1,4 @@
-import Button from "@/components/ui/8bit/button";
+import { Button } from "@/components/ui/8bit/button";
 import { OpenInV0Button } from "../open-in-v0-button";
 import CopyCommandButton from "../copy-command-button";
 

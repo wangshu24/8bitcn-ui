@@ -28,7 +28,7 @@ export interface BitInputProps
   asChild?: boolean;
 }
 
-export default function Input({ ...props }: BitInputProps) {
+function Input({ ...props }: BitInputProps) {
   const { className, font } = props;
 
   return (
@@ -51,3 +51,5 @@ export default function Input({ ...props }: BitInputProps) {
     </div>
   );
 }
+
+export { Input };

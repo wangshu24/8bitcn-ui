@@ -43,7 +43,7 @@ export interface BitButtonProps
   asChild?: boolean;
 }
 
-export default function Button({ children, ...props }: BitButtonProps) {
+function Button({ children, ...props }: BitButtonProps) {
   const { variant, size, className, font } = props;
 
   return (
@@ -89,3 +89,5 @@ export default function Button({ children, ...props }: BitButtonProps) {
     </ShadcnButton>
   );
 }
+
+export { Button };

@@ -2,7 +2,7 @@ import Link from "next/link";
 
 import { pressStart } from "@/config/fonts";
 
-import Button from "@/components/ui/8bit/button";
+import { Button } from "@/components/ui/8bit/button";
 
 export default function Home() {
   return (

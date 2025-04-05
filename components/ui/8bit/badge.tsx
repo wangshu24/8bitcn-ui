@@ -34,7 +34,7 @@ export interface BitButtonProps
   asChild?: boolean;
 }
 
-export default function Badge({ children, ...props }: BitButtonProps) {
+function Badge({ children, ...props }: BitButtonProps) {
   const { variant, className, font } = props;
 
   return (
@@ -56,3 +56,5 @@ export default function Badge({ children, ...props }: BitButtonProps) {
     </div>
   );
 }
+
+export { Badge };

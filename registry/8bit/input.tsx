@@ -23,18 +23,18 @@ export const inputVariants = cva("", {
 });
 
 export interface BitInputProps
-  extends React.ButtonHTMLAttributes<HTMLButtonElement>,
+  extends React.InputHTMLAttributes<HTMLInputElement>,
     VariantProps<typeof inputVariants> {
   asChild?: boolean;
 }
 
-export default function Input({ ...props }: BitInputProps) {
+function Input({ ...props }: BitInputProps) {
   const { className, font } = props;
 
   return (
-    <div className="relative w-full">
+    <div className={cn("relative w-full", className)}>
       <ShadcnInput
-        placeholder="Enter text"
+        {...props}
         className={cn(
           "rounded-none transition-transform ring-0",
           font !== "normal" && pressStart.className,
@@ -51,3 +51,5 @@ export default function Input({ ...props }: BitInputProps) {
     </div>
   );
 }
+
+export { Input };
