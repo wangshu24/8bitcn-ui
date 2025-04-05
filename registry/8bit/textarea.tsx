@@ -23,7 +23,7 @@ export const inputVariants = cva("", {
 });
 
 export interface BitTextareaProps
-  extends React.ButtonHTMLAttributes<HTMLButtonElement>,
+  extends React.ComponentProps<"textarea">,
     VariantProps<typeof inputVariants> {
   asChild?: boolean;
 }
