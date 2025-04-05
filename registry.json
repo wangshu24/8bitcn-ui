@@ -11,7 +11,7 @@
       "registryDependencies": ["button"],
       "files": [
         {
-          "path": "registry/8bit/button.tsx",
+          "path": "components/ui/8bit/button.tsx",
           "type": "registry:component",
           "target": "components/ui/8bit/button.tsx"
         }
@@ -25,7 +25,7 @@
       "registryDependencies": ["input"],
       "files": [
         {
-          "path": "registry/8bit/input.tsx",
+          "path": "components/ui/8bit/input.tsx",
           "type": "registry:component",
           "target": "components/ui/8bit/input.tsx"
         }
@@ -39,7 +39,7 @@
       "registryDependencies": ["badge"],
       "files": [
         {
-          "path": "registry/8bit/badge.tsx",
+          "path": "components/ui/8bit/badge.tsx",
           "type": "registry:component",
           "target": "components/ui/8bit/badge.tsx"
         }
@@ -53,7 +53,7 @@
       "registryDependencies": ["textarea"],
       "files": [
         {
-          "path": "registry/8bit/textarea.tsx",
+          "path": "components/ui/8bit/textarea.tsx",
           "type": "registry:component",
           "target": "components/ui/8bit/textarea.tsx"
         }
@@ -67,7 +67,7 @@
       "registryDependencies": ["card"],
       "files": [
         {
-          "path": "registry/8bit/card.tsx",
+          "path": "components/ui/8bit/card.tsx",
           "type": "registry:component",
           "target": "components/ui/8bit/card.tsx"
         }
