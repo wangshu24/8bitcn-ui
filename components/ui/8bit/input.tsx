@@ -32,7 +32,7 @@ export default function Input({ ...props }: BitInputProps) {
   const { className, font } = props;
 
   return (
-    <div className="relative w-full">
+    <div className={cn("relative w-full", className)}>
       <ShadcnInput
         {...props}
         className={cn(

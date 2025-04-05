@@ -58,6 +58,20 @@
           "target": "components/ui/8bit/textarea.tsx"
         }
       ]
+    },
+    {
+      "name": "8bit-card",
+      "type": "registry:component",
+      "title": "8-bit Card",
+      "description": "A simple 8-bit card component",
+      "registryDependencies": ["card"],
+      "files": [
+        {
+          "path": "registry/8bit/card.tsx",
+          "type": "registry:component",
+          "target": "components/ui/8bit/card.tsx"
+        }
+      ]
     }
   ]
 }

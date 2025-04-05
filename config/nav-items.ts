@@ -28,6 +28,10 @@ export const navItems = {
                     url: "/components/button",
                 },
                 {
+                    title: "Card",
+                    url: "/components/card",
+                },
+                {
                     title: "Input",
                     url: "/components/input",
                 },

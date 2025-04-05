@@ -32,7 +32,7 @@ export default function Textarea({ ...props }: BitTextareaProps) {
   const { className, font } = props;
 
   return (
-    <div className="relative w-full">
+    <div className={cn("relative w-full", className)}>
       <ShadcnTextarea
         placeholder="Enter text"
         className={cn(

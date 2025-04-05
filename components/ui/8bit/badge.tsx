@@ -38,7 +38,7 @@ export default function Badge({ children, ...props }: BitButtonProps) {
   const { variant, className, font } = props;
 
   return (
-    <div className="relative">
+    <div className={cn("relative", className)}>
       <ShadcnBadge
         {...props}
         className={cn(
