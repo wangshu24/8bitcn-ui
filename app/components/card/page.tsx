@@ -20,6 +20,7 @@ import {
 import { Label } from "@/components/ui/8bit/label";
 import InstallationCommands from "../installation-commands";
 import { Separator } from "@/components/ui/separator";
+import CodeSnippet from "../code-snippet";
 
 export default function TextareaPage() {
   return (
@@ -86,6 +87,34 @@ export default function TextareaPage() {
       <InstallationCommands
         packageUrl={`${process.env.NEXT_PUBLIC_BASE_URL}/r/8bit-card.json`}
       />
+
+      <h3 className="text-lg font-bold mt-10">Usage</h3>
+
+      <Separator />
+
+      <CodeSnippet>{`import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/8bit/card"`}</CodeSnippet>
+
+      <CodeSnippet>
+        {`<Card>
+  <CardHeader>
+    <CardTitle>Card Title</CardTitle>
+    <CardDescription>Card Description</CardDescription>
+  </CardHeader>
+  <CardContent>
+    <p>Card Content</p>
+  </CardContent>
+  <CardFooter>
+    <p>Card Footer</p>
+  </CardFooter>
+</Card>`}
+      </CodeSnippet>
     </div>
   );
 }
