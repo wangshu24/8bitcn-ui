@@ -9,6 +9,7 @@ import { OpenInV0Button } from "../open-in-v0-button";
 import CopyCommandButton from "../copy-command-button";
 import InstallationCommands from "../installation-commands";
 import { Separator } from "@/components/ui/separator";
+import CodeSnippet from "../code-snippet";
 
 export default function SelectPage() {
   return (
@@ -56,6 +57,31 @@ export default function SelectPage() {
       <InstallationCommands
         packageUrl={`${process.env.NEXT_PUBLIC_BASE_URL}/r/8bit-select.json`}
       />
+
+      <h3 className="text-lg font-bold mt-10">Usage</h3>
+
+      <Separator />
+
+      <CodeSnippet>{`import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/8bit/select"`}</CodeSnippet>
+
+      <CodeSnippet>
+        {`<Select>
+  <SelectTrigger className="w-[180px]">
+    <SelectValue placeholder="Theme" />
+  </SelectTrigger>
+  <SelectContent>
+    <SelectItem value="light">Light</SelectItem>
+    <SelectItem value="dark">Dark</SelectItem>
+    <SelectItem value="system">System</SelectItem>
+  </SelectContent>
+</Select>`}
+      </CodeSnippet>
     </div>
   );
 }
