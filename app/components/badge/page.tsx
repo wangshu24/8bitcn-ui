@@ -38,13 +38,9 @@ export default function BadgePage() {
 
       <Separator />
 
-      <div className="rounded-lg overflow-hidden border border-zinc-800">
-        <div className="bg-[#121212] text-white">
-          <InstallationCommands
-            packageUrl={`${process.env.NEXT_PUBLIC_BASE_URL}/r/8bit-badge.json`}
-          />
-        </div>
-      </div>
+      <InstallationCommands
+        packageUrl={`${process.env.NEXT_PUBLIC_BASE_URL}/r/8bit-badge.json`}
+      />
     </div>
   );
 }
