@@ -3,6 +3,7 @@ import { OpenInV0Button } from "../open-in-v0-button";
 import CopyCommandButton from "../copy-command-button";
 import InstallationCommands from "../installation-commands";
 import { Separator } from "@/components/ui/separator";
+import CodeSnippet from "../code-snippet";
 
 export default function LabelPage() {
   return (
@@ -41,6 +42,14 @@ export default function LabelPage() {
       <InstallationCommands
         packageUrl={`${process.env.NEXT_PUBLIC_BASE_URL}/r/8bit-label.json`}
       />
+
+      <h3 className="text-lg font-bold mt-10">Usage</h3>
+
+      <Separator />
+
+      <CodeSnippet>{`import { Label } from "@/components/ui/8bit/label"`}</CodeSnippet>
+
+      <CodeSnippet>{`<Label>Label</Label>`}</CodeSnippet>
     </div>
   );
 }
