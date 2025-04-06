@@ -1,6 +1,8 @@
 import { Button } from "@/components/ui/8bit/button";
 import { OpenInV0Button } from "../open-in-v0-button";
 import CopyCommandButton from "../copy-command-button";
+import InstallationCommands from "../installation-commands";
+import { Separator } from "@/components/ui/separator";
 
 export default function ButtonPage() {
   return (
@@ -31,6 +33,14 @@ export default function ButtonPage() {
           <Button>Button</Button>
         </div>
       </div>
+
+      <h3 className="text-lg font-bold">Installation</h3>
+
+      <Separator />
+
+      <InstallationCommands
+        packageUrl={`${process.env.NEXT_PUBLIC_BASE_URL}/r/8bit-button.json`}
+      />
     </div>
   );
 }
