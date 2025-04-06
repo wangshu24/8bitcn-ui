@@ -10,6 +10,13 @@ import { OpenInV0Button } from "../open-in-v0-button";
 import CopyCommandButton from "../copy-command-button";
 import { Input } from "@/components/ui/8bit/input";
 import { Button } from "@/components/ui/8bit/button";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/8bit/select";
 
 export default function TextareaPage() {
   return (
@@ -46,7 +53,18 @@ export default function TextareaPage() {
             </CardHeader>
             <CardContent className="flex flex-col gap-4">
               <Input placeholder="Project name" className="max-w-72" />
-              <Input placeholder="Framework" className="max-w-72" />
+
+              <Select>
+                <SelectTrigger>
+                  <SelectValue placeholder="Framework" />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="light">Next.js</SelectItem>
+                  <SelectItem value="dark">SvelteKit</SelectItem>
+                  <SelectItem value="system">Astro</SelectItem>
+                  <SelectItem value="system">Nuxt.js</SelectItem>
+                </SelectContent>
+              </Select>
             </CardContent>
             <CardFooter className="flex justify-between">
               <Button variant="outline">Cancel</Button>
