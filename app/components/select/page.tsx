@@ -12,21 +12,21 @@ export default function InputPage() {
   return (
     <div className="flex flex-col gap-4">
       <div className="flex flex-col md:flex-row items-center justify-between gap-2">
-        <h1 className="text-3xl font-bold">Input</h1>
+        <h1 className="text-3xl font-bold">Select</h1>
         <CopyCommandButton
-          copyCommand={`pnpm dlx shadcn@canary add ${process.env.NEXT_PUBLIC_BASE_URL}/r/8bit-input.json`}
-          command={"pnpm dlx shadcn@canary add 8bit-input"}
+          copyCommand={`pnpm dlx shadcn@canary add ${process.env.NEXT_PUBLIC_BASE_URL}/r/8bit-select.json`}
+          command={"pnpm dlx shadcn@canary add 8bit-select"}
         />
       </div>
 
       <p className="text-muted-foreground">
-        Displays a input or a component that looks like a 8-bit button.
+        Displays a select a component that looks like a 8-bit dropdown menu.
       </p>
 
       <div className="flex flex-col gap-4 border rounded-lg p-4 min-h-[450px] relative">
         <div className="flex items-center justify-between">
           <h2 className="text-sm text-muted-foreground sm:pl-3">
-            A simple 8-bit input component
+            A simple 8-bit select component
           </h2>
 
           <div className="flex items-center gap-2">
