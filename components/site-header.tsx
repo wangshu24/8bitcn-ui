@@ -1,20 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import { Menu } from "lucide-react";
-
 import { navItems } from "@/config/nav-items";
 import { pressStart } from "@/config/fonts";
 
-import {
-  Drawer,
-  DrawerContent,
-  DrawerHeader,
-  DrawerTitle,
-  DrawerTrigger,
-} from "@/components/ui/drawer";
 import { Button } from "@/components/ui/button";
 import { ModeSwitcher } from "@/components/mode-switcher";
+import MobileNav from "./mobile-nav";
 
 export function SiteHeader() {
   return (
@@ -30,45 +22,7 @@ export function SiteHeader() {
         </Link>
 
         <div className="block md:hidden">
-          <Drawer>
-            <DrawerTrigger asChild>
-              <Button variant="ghost" size="icon">
-                <Menu />
-              </Button>
-            </DrawerTrigger>
-            <DrawerContent className="h-3/4">
-              <DrawerHeader>
-                <div className="flex flex-col gap-2">
-                  {navItems.header.map((item) => (
-                    <Link
-                      href={item.href}
-                      key={item.href}
-                      className="text-2xl font-extralight"
-                    >
-                      {item.label}
-                    </Link>
-                  ))}
-                </div>
-
-                {navItems.navMain.map((navItem) => (
-                  <div key={navItem.title} className="flex flex-col gap-2 pt-4">
-                    <DrawerTitle className="text-xl">
-                      {navItem.title}
-                    </DrawerTitle>
-                    {navItem.items.map((item) => (
-                      <Link
-                        href={item.url}
-                        key={item.title}
-                        className="text-xl font-extralight text-muted-foreground"
-                      >
-                        {item.title}
-                      </Link>
-                    ))}
-                  </div>
-                ))}
-              </DrawerHeader>
-            </DrawerContent>
-          </Drawer>
+          <MobileNav />
         </div>
 
         <nav className="hidden md:flex items-center gap-4 text-sm">
