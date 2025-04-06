@@ -8,7 +8,7 @@ import {
 import { OpenInV0Button } from "../open-in-v0-button";
 import CopyCommandButton from "../copy-command-button";
 
-export default function InputPage() {
+export default function SelectPage() {
   return (
     <div className="flex flex-col gap-4">
       <div className="flex flex-col md:flex-row items-center justify-between gap-2">
@@ -30,7 +30,7 @@ export default function InputPage() {
           </h2>
 
           <div className="flex items-center gap-2">
-            <OpenInV0Button name="8bit-input" className="w-fit" />
+            <OpenInV0Button name="8bit-select" className="w-fit" />
           </div>
         </div>
         <div className="flex items-center justify-center min-h-[400px] max-w-md mx-auto relative">
