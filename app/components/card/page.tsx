@@ -62,10 +62,10 @@ export default function TextareaPage() {
                   <SelectValue placeholder="Framework" />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="light">Next.js</SelectItem>
-                  <SelectItem value="dark">SvelteKit</SelectItem>
-                  <SelectItem value="system">Astro</SelectItem>
-                  <SelectItem value="system">Nuxt.js</SelectItem>
+                  <SelectItem value="next">Next.js</SelectItem>
+                  <SelectItem value="svelte">SvelteKit</SelectItem>
+                  <SelectItem value="astro">Astro</SelectItem>
+                  <SelectItem value="nuxt">Nuxt.js</SelectItem>
                 </SelectContent>
               </Select>
             </CardContent>
