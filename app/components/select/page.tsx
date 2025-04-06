@@ -7,6 +7,8 @@ import {
 } from "@/components/ui/8bit/select";
 import { OpenInV0Button } from "../open-in-v0-button";
 import CopyCommandButton from "../copy-command-button";
+import InstallationCommands from "../installation-commands";
+import { Separator } from "@/components/ui/separator";
 
 export default function SelectPage() {
   return (
@@ -46,6 +48,14 @@ export default function SelectPage() {
           </Select>
         </div>
       </div>
+
+      <h3 className="text-lg font-bold">Installation</h3>
+
+      <Separator />
+
+      <InstallationCommands
+        packageUrl={`${process.env.NEXT_PUBLIC_BASE_URL}/r/8bit-select.json`}
+      />
     </div>
   );
 }
