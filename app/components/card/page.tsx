@@ -17,6 +17,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/8bit/select";
+import { Label } from "@/components/ui/8bit/label";
 
 export default function TextareaPage() {
   return (
@@ -52,8 +53,10 @@ export default function TextareaPage() {
               </CardDescription>
             </CardHeader>
             <CardContent className="flex flex-col gap-4">
+              <Label>Name</Label>
               <Input placeholder="Project name" className="max-w-72" />
 
+              <Label>Framework</Label>
               <Select>
                 <SelectTrigger>
                   <SelectValue placeholder="Framework" />
