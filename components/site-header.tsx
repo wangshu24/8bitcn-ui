@@ -71,12 +71,12 @@ export function SiteHeader() {
           </Drawer>
         </div>
 
-        <nav className="hidden md:flex items-center gap-4">
+        <nav className="hidden md:flex items-center gap-4 text-sm">
           {navItems.header.map((item) => (
             <Link
               href={item.href}
               key={item.href}
-              className="text-sm font-extralight"
+              className="transition-colors hover:text-foreground/80 text-foreground"
             >
               {item.label}
             </Link>
