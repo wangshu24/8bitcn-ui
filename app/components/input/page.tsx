@@ -3,6 +3,7 @@ import { OpenInV0Button } from "../open-in-v0-button";
 import CopyCommandButton from "../copy-command-button";
 import InstallationCommands from "../installation-commands";
 import { Separator } from "@/components/ui/separator";
+import CodeSnippet from "../code-snippet";
 
 export default function InputPage() {
   return (
@@ -41,6 +42,14 @@ export default function InputPage() {
       <InstallationCommands
         packageUrl={`${process.env.NEXT_PUBLIC_BASE_URL}/r/8bit-input.json`}
       />
+
+      <h3 className="text-lg font-bold mt-10">Usage</h3>
+
+      <Separator />
+
+      <CodeSnippet>{`import { Input } from "@/components/ui/8bit/input"`}</CodeSnippet>
+
+      <CodeSnippet>{`<Input placeholder="Enter text" />`}</CodeSnippet>
     </div>
   );
 }
