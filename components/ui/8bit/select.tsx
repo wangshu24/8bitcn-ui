@@ -86,7 +86,7 @@ function SelectTrigger({ children, ...props }: BitSelectTriggerProps) {
       )}
     >
       <ShadcnSelectTrigger
-        className={cn("rounded-none transition-transform ring-0", className)}
+        className={cn("rounded-none ring-0 w-full", className)}
         {...props}
       >
         {children}
@@ -116,21 +116,16 @@ function SelectContent({
   const { font } = props;
 
   return (
-    <div className={cn("relative w-full", className)}>
-      <ShadcnSelectContent
-        className={cn(font !== "normal" && pressStart.className, className)}
-        {...props}
-      >
-        {children}
-      </ShadcnSelectContent>
-
-      <div className="absolute top-0 left-0 w-full h-1.5 bg-ring" />
-      <div className="absolute bottom-0 w-full h-1.5 bg-ring" />
-      <div className="absolute top-1 -left-1 w-1.5 h-1/2 bg-ring" />
-      <div className="absolute bottom-1 -left-1 w-1.5 h-1/2 bg-ring" />
-      <div className="absolute top-1 -right-1 w-1.5 h-1/2 bg-ring" />
-      <div className="absolute bottom-1 -right-1 w-1.5 h-1/2 bg-ring" />
-    </div>
+    <ShadcnSelectContent
+      className={cn(
+        font !== "normal" && pressStart.className,
+        className,
+        "rounded-none border-4 border-ring -ml-[2px]"
+      )}
+      {...props}
+    >
+      {children}
+    </ShadcnSelectContent>
   );
 }
 
