@@ -3,6 +3,7 @@ import { OpenInV0Button } from "../open-in-v0-button";
 import CopyCommandButton from "../copy-command-button";
 import { Separator } from "@/components/ui/separator";
 import InstallationCommands from "../installation-commands";
+import CodeSnippet from "../code-snippet";
 
 export default function BadgePage() {
   return (
@@ -41,6 +42,14 @@ export default function BadgePage() {
       <InstallationCommands
         packageUrl={`${process.env.NEXT_PUBLIC_BASE_URL}/r/8bit-badge.json`}
       />
+
+      <h3 className="text-lg font-bold mt-10">Usage</h3>
+
+      <Separator />
+
+      <CodeSnippet>{`import { Badge } from "@/components/ui/8bit/badge"`}</CodeSnippet>
+
+      <CodeSnippet>{`<Badge>Badge</Badge>`}</CodeSnippet>
     </div>
   );
 }
