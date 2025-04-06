@@ -86,6 +86,20 @@
           "target": "components/ui/8bit/select.tsx"
         }
       ]
+    },
+    {
+      "name": "8bit-label",
+      "type": "registry:component",
+      "title": "8-bit Label",
+      "description": "A simple 8-bit label component",
+      "registryDependencies": ["label"],
+      "files": [
+        {
+          "path": "components/ui/8bit/label.tsx",
+          "type": "registry:component",
+          "target": "components/ui/8bit/label.tsx"
+        }
+      ]
     }
   ]
 }

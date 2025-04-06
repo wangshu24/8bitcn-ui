@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "8bit-label",
+  "type": "registry:component",
+  "title": "8-bit Label",
+  "description": "A simple 8-bit label component",
+  "registryDependencies": [
+    "label"
+  ],
+  "files": [
+    {
+      "path": "components/ui/8bit/label.tsx",
+      "content": "\"use client\";\n\nimport * as React from \"react\";\nimport * as LabelPrimitive from \"@radix-ui/react-label\";\n\nimport { Label as ShadcnLabel } from \"@/components/ui/label\";\nimport { cva, VariantProps } from \"class-variance-authority\";\n\nimport { cn } from \"@/lib/utils\";\nimport { Press_Start_2P } from \"next/font/google\";\n\nconst pressStart = Press_Start_2P({\n  weight: [\"400\"],\n  subsets: [\"latin\"],\n});\n\nexport const inputVariants = cva(\"\", {\n  variants: {\n    font: {\n      normal: \"\",\n      retro: pressStart.className,\n    },\n  },\n  defaultVariants: {\n    font: \"retro\",\n  },\n});\n\ninterface BitLabelProps\n  extends React.ComponentProps<typeof LabelPrimitive.Root>,\n    VariantProps<typeof inputVariants> {\n  asChild?: boolean;\n}\n\nfunction Label({ className, font, ...props }: BitLabelProps) {\n  return (\n    <ShadcnLabel\n      className={cn(className, font !== \"normal\" && pressStart.className)}\n      {...props}\n    />\n  );\n}\n\nexport { Label };\n",
+      "type": "registry:component",
+      "target": "components/ui/8bit/label.tsx"
+    }
+  ]
+}
