@@ -18,6 +18,8 @@ import {
   SelectValue,
 } from "@/components/ui/8bit/select";
 import { Label } from "@/components/ui/8bit/label";
+import InstallationCommands from "../installation-commands";
+import { Separator } from "@/components/ui/separator";
 
 export default function TextareaPage() {
   return (
@@ -76,6 +78,14 @@ export default function TextareaPage() {
           </Card>
         </div>
       </div>
+
+      <h3 className="text-lg font-bold">Installation</h3>
+
+      <Separator />
+
+      <InstallationCommands
+        packageUrl={`${process.env.NEXT_PUBLIC_BASE_URL}/r/8bit-card.json`}
+      />
     </div>
   );
 }
