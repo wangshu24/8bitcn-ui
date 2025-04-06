@@ -36,6 +36,10 @@ export const navItems = {
                     url: "/components/input",
                 },
                 {
+                    title: "Select",
+                    url: "/components/select",
+                },
+                {
                     title: "Textarea",
                     url: "/components/textarea",
                 },

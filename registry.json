@@ -72,6 +72,20 @@
           "target": "components/ui/8bit/card.tsx"
         }
       ]
+    },
+    {
+      "name": "8bit-select",
+      "type": "registry:component",
+      "title": "8-bit Select",
+      "description": "A simple 8-bit select component",
+      "registryDependencies": ["select"],
+      "files": [
+        {
+          "path": "components/ui/8bit/select.tsx",
+          "type": "registry:component",
+          "target": "components/ui/8bit/select.tsx"
+        }
+      ]
     }
   ]
 }
