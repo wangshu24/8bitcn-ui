@@ -42,12 +42,12 @@ function Input({ ...props }: BitInputProps) {
         )}
       />
 
-      <div className="absolute top-0 left-0 w-full h-1.5 bg-ring pointer-events-none" />
-      <div className="absolute bottom-0 w-full h-1.5 bg-ring pointer-events-none" />
-      <div className="absolute top-1 -left-1 w-1.5 h-1/2 bg-ring pointer-events-none" />
-      <div className="absolute bottom-1 -left-1 w-1.5 h-1/2 bg-ring pointer-events-none" />
-      <div className="absolute top-1 -right-1 w-1.5 h-1/2 bg-ring pointer-events-none" />
-      <div className="absolute bottom-1 -right-1 w-1.5 h-1/2 bg-ring pointer-events-none" />
+      <div className="absolute top-0 left-0 w-full h-1.5 bg-foreground dark:bg-ring pointer-events-none" />
+      <div className="absolute bottom-0 w-full h-1.5 bg-foreground dark:bg-ring pointer-events-none" />
+      <div className="absolute top-1 -left-1 w-1.5 h-1/2 bg-foreground dark:bg-ring pointer-events-none" />
+      <div className="absolute bottom-1 -left-1 w-1.5 h-1/2 bg-foreground dark:bg-ring pointer-events-none" />
+      <div className="absolute top-1 -right-1 w-1.5 h-1/2 bg-foreground dark:bg-ring pointer-events-none" />
+      <div className="absolute bottom-1 -right-1 w-1.5 h-1/2 bg-foreground dark:bg-ring pointer-events-none" />
     </div>
   );
 }

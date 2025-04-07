@@ -92,12 +92,12 @@ function SelectTrigger({ children, ...props }: BitSelectTriggerProps) {
         {children}
       </ShadcnSelectTrigger>
 
-      <div className="absolute top-0 left-0 w-full h-1.5 bg-ring" />
-      <div className="absolute bottom-0 w-full h-1.5 bg-ring" />
-      <div className="absolute top-1 -left-1 w-1.5 h-1/2 bg-ring" />
-      <div className="absolute bottom-1 -left-1 w-1.5 h-1/2 bg-ring" />
-      <div className="absolute top-1 -right-1 w-1.5 h-1/2 bg-ring" />
-      <div className="absolute bottom-1 -right-1 w-1.5 h-1/2 bg-ring" />
+      <div className="absolute top-0 left-0 w-full h-1.5 bg-foreground dark:bg-ring" />
+      <div className="absolute bottom-0 w-full h-1.5 bg-foreground dark:bg-ring" />
+      <div className="absolute top-1 -left-1 w-1.5 h-1/2 bg-foreground dark:bg-ring" />
+      <div className="absolute bottom-1 -left-1 w-1.5 h-1/2 bg-foreground dark:bg-ring" />
+      <div className="absolute top-1 -right-1 w-1.5 h-1/2 bg-foreground dark:bg-ring" />
+      <div className="absolute bottom-1 -right-1 w-1.5 h-1/2 bg-foreground dark:bg-ring" />
     </div>
   );
 }
@@ -120,7 +120,7 @@ function SelectContent({
       className={cn(
         font !== "normal" && pressStart.className,
         className,
-        "rounded-none border-4 border-ring -ml-[3px]"
+        "rounded-none border-4 border-foreground dark:border-ring -ml-[3px]"
       )}
       {...props}
     >
