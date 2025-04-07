@@ -120,7 +120,7 @@ function SelectContent({
       className={cn(
         font !== "normal" && pressStart.className,
         className,
-        "rounded-none border-4 border-ring -ml-[2px]"
+        "rounded-none border-4 border-ring -ml-[3px]"
       )}
       {...props}
     >
