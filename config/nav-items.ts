@@ -19,6 +19,11 @@ export const navItems = {
       url: "/components/button",
       items: [
         {
+          title: "Alert",
+          url: "/components/alert",
+          new: true,
+        },
+        {
           title: "Badge",
           url: "/components/badge",
         },
@@ -55,6 +60,11 @@ export const navItems = {
         {
           title: "Textarea",
           url: "/components/textarea",
+        },
+        {
+          title: "Alert",
+          url: "/components/alert",
+          new: true,
         },
       ],
     },
