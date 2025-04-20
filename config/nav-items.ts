@@ -132,6 +132,11 @@ export const navItems = {
           url: "/docs/components/table",
         },
         {
+          title: "Tabs",
+          url: "/docs/components/tabs",
+          new: true,
+        },
+        {
           title: "Textarea",
           url: "/docs/components/textarea",
         },
