@@ -1,7 +1,7 @@
 import * as React from "react"
 import type { Metadata } from "next"
 
-import { comboBoxMetaData } from "@/lib/metadata"
+import { commandMetaData } from "@/lib/metadata"
 import { Separator } from "@/components/ui/separator"
 import { CommandExample } from "@/components/examples/command"
 import CodeSnippet from "@/app/docs/components/code-snippet"
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   description:
     "A command component with a searchable input for selecting items from a list.",
   openGraph: {
-    images: comboBoxMetaData,
+    images: commandMetaData,
   },
 }
 
