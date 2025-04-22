@@ -87,7 +87,7 @@ const settingCommands = [
 export function CommandExample() {
   return (
     <Command>
-      <CommandInput placeholder="Type a command or search..." />
+      <CommandInput placeholder="Type a command..." />
       <CommandList>
         <CommandEmpty>No results found.</CommandEmpty>
         <CommandGroup heading="Suggestions">
