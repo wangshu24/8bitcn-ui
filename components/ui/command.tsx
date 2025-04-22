@@ -1,6 +1,7 @@
 "use client"
 
 import * as React from "react"
+import { Press_Start_2P } from "next/font/google"
 import { Command as CommandPrimitive } from "cmdk"
 import { SearchIcon } from "raster-react"
 
@@ -13,6 +14,11 @@ import {
   DialogTitle,
 } from "@/components/ui/dialog"
 
+const pressStart = Press_Start_2P({
+  weight: ["400"],
+  subsets: ["latin"],
+})
+
 function Command({
   className,
   ...props
@@ -22,6 +28,7 @@ function Command({
       data-slot="command"
       className={cn(
         "bg-popover text-popover-foreground flex h-full w-full flex-col overflow-hidden rounded-md",
+        pressStart.className,
         className
       )}
       {...props}
