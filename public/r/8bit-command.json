@@ -1,0 +1,10 @@
+{
+    "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+    "name": "8bit-command",
+    "type": "registry:component",
+    "title": "8-bit Combo Box",
+    "description": "A simple 8-bit command component",
+    "registryDependencies": [
+      "command"
+    ]
+  }
