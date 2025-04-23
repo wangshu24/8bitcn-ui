@@ -129,6 +129,11 @@ export const navItems = {
           new: true,
         },
         {
+          title: "Resizable",
+          url: "/docs/components/resizable",
+          new: true,
+        },
+        {
           title: "Switch",
           url: "/docs/components/switch",
         },
