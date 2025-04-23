@@ -115,6 +115,11 @@ export const navItems = {
           url: "/docs/components/label",
         },
         {
+          title: "Pagination",
+          url: "/docs/components/pagination",
+          new: true,
+        },
+        {
           title: "Popover",
           url: "/docs/components/popover",
         },
