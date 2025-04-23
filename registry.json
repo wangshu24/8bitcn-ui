@@ -441,6 +441,20 @@
           "target": "components/ui/8bit/popover.tsx"
         }
       ]
+    },
+    {
+      "name": "8bit-command",
+      "type": "registry:component",
+      "title": "8-bit Command",
+      "description": "A simple 8-bit command component",
+      "registryDependencies": ["command"],
+      "files": [
+        {
+          "path": "components/ui/8bit/command.tsx",
+          "type": "registry:component",
+          "target": "components/ui/8bit/command.tsx"
+        }
+      ]
     }
   ]
 }
