@@ -455,6 +455,20 @@
           "target": "components/ui/8bit/command.tsx"
         }
       ]
+    },
+    {
+      "name": "8bit-radio-group",
+      "type": "registry:component",
+      "title": "8-bit Radio Group",
+      "description": "A simple 8-bit radio group component",
+      "registryDependencies": ["radio-group"],
+      "files": [
+        {
+          "path": "components/ui/8bit/radio-group.tsx",
+          "type": "registry:component",
+          "target": "components/ui/8bit/radio-group.tsx"
+        }
+      ]
     }
   ]
 }

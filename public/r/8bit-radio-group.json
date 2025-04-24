@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "8bit-radio-group",
+  "type": "registry:component",
+  "title": "8-bit Radio Group",
+  "description": "A simple 8-bit radio group component",
+  "registryDependencies": [
+    "radio-group"
+  ],
+  "files": [
+    {
+      "path": "components/ui/8bit/radio-group.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { Press_Start_2P } from \"next/font/google\"\nimport { cva, VariantProps } from \"class-variance-authority\"\n\nimport { cn } from \"@/lib/utils\"\nimport {\n  RadioGroup as ShadcnRadioGroup,\n  RadioGroupItem as ShadcnRadioGroupItem,\n} from \"@/components/ui/radio-group\"\n\nconst pressStart = Press_Start_2P({\n  weight: [\"400\"],\n  subsets: [\"latin\"],\n})\n\nexport const radioGroupVariants = cva(\"\", {\n  variants: {\n    font: {\n      normal: \"\",\n      retro: pressStart.className,\n    },\n    variant: {\n      default: \"\",\n      retro: \"\",\n      pixel: \"\",\n    },\n  },\n  defaultVariants: {\n    font: \"retro\",\n    variant: \"pixel\",\n  },\n})\n\nfunction RadioGroup({\n  className,\n  ...props\n}: React.ComponentPropsWithoutRef<typeof ShadcnRadioGroup> & {\n  variant?: VariantProps<typeof radioGroupVariants>[\"variant\"]\n}) {\n  return <ShadcnRadioGroup className={cn(\"\", className)} {...props} />\n}\n\nfunction RadioGroupItem({\n  className,\n  ...props\n}: React.ComponentPropsWithoutRef<typeof ShadcnRadioGroupItem> & {\n  variant?: VariantProps<typeof radioGroupVariants>[\"variant\"]\n}) {\n  return <ShadcnRadioGroupItem className={cn(\"\", className)} {...props} />\n}\n\nexport { RadioGroup, RadioGroupItem }\n",
+      "type": "registry:component",
+      "target": "components/ui/8bit/radio-group.tsx"
+    }
+  ]
+}
