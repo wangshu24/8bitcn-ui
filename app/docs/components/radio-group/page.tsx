@@ -25,8 +25,8 @@ export default function RadioGroupPage() {
       <div className="flex flex-col md:flex-row items-center justify-between gap-2">
         <h1 className="text-3xl font-bold">Radio Group</h1>
         <CopyCommandButton
-          copyCommand={`pnpm dlx shadcn@canary add ${process.env.NEXT_PUBLIC_BASE_URL}/r/8bit-command.json`}
-          command={"pnpm dlx shadcn@canary add 8bit-command"}
+          copyCommand={`pnpm dlx shadcn@canary add ${process.env.NEXT_PUBLIC_BASE_URL}/r/8bit-radio-group.json`}
+          command={"pnpm dlx shadcn@canary add 8bit-radio-group"}
         />
       </div>
 
@@ -67,7 +67,7 @@ export default function RadioGroupPage() {
       <Separator />
 
       <InstallationCommands
-        packageUrl={`${process.env.NEXT_PUBLIC_BASE_URL}/r/8bit-command.json`}
+        packageUrl={`${process.env.NEXT_PUBLIC_BASE_URL}/r/8bit-radio-group.json`}
       />
 
       <h3 className="text-lg font-bold mt-10">Usage</h3>
