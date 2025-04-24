@@ -1,6 +1,7 @@
 import * as React from "react"
 import type { Metadata } from "next"
 
+import { radioGroupMetaData } from "@/lib/metadata"
 import { Label } from "@/components/ui/8bit/label"
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
 import { Separator } from "@/components/ui/separator"
@@ -13,6 +14,9 @@ export const metadata: Metadata = {
   title: "8bit Command",
   description:
     "A command component with a searchable input for selecting items from a list.",
+  openGraph: {
+    images: radioGroupMetaData,
+  },
 }
 
 export default function RadioGroupPage() {
@@ -70,7 +74,27 @@ export default function RadioGroupPage() {
 
       <Separator />
 
-      <CodeSnippet>{``}</CodeSnippet>
+      <CodeSnippet>{`
+      import { Label } from "@/components/ui/8bit/label"
+      import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
+      `}</CodeSnippet>
+
+      <CodeSnippet>{` 
+      <RadioGroup defaultValue="comfortable">
+        <div className="flex items-center space-x-2">
+          <RadioGroupItem value="default" id="r1" />
+          <Label htmlFor="r1">Default</Label>
+        </div>
+        <div className="flex items-center space-x-2">
+          <RadioGroupItem value="comfortable" id="r2" />
+          <Label htmlFor="r2">Comfortable</Label>
+        </div>
+        <div className="flex items-center space-x-2">
+          <RadioGroupItem value="compact" id="r3" />
+          <Label htmlFor="r3">Compact</Label>
+        </div>
+      </RadioGroup>
+      `}</CodeSnippet>
     </div>
   )
 }
