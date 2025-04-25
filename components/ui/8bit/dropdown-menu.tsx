@@ -47,7 +47,7 @@ function DropdownMenuSubTrigger({
   return (
     <ShadcnDropdownMenuSubTrigger
       className={cn(
-        "hover:bg-transparent active:bg-transparent focus:bg-transparent rounded-none border-dotted border-y-4 border-transparent focus:border-foreground hover:border-foreground dark:focus:border-ring bg-transparent data-[state=open]:bg-transparent data-[state=open]:border-foreground dark:data-[state=open]:border-ring",
+        "hover:bg-transparent active:bg-transparent focus:bg-transparent rounded-none border-dashed border-y-4 border-transparent focus:border-foreground hover:border-foreground dark:focus:border-ring bg-transparent data-[state=open]:bg-transparent data-[state=open]:border-foreground dark:data-[state=open]:border-ring",
         className
       )}
       {...props}
@@ -65,7 +65,7 @@ function DropdownMenuItem({
   return (
     <ShadcnDropdownMenuItem
       className={cn(
-        "hover:bg-transparent active:bg-transparent focus:bg-transparent rounded-none border-dotted border-y-4 border-transparent focus:border-foreground hover:border-foreground dark:focus:border-ring bg-transparent",
+        "hover:bg-transparent active:bg-transparent focus:bg-transparent rounded-none border-dashed border-y-4 border-transparent focus:border-foreground hover:border-foreground dark:focus:border-ring bg-transparent",
         className
       )}
       {...props}
