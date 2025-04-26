@@ -3,6 +3,7 @@
 import * as React from "react"
 import { Press_Start_2P } from "next/font/google"
 import { cva, VariantProps } from "class-variance-authority"
+import { Square } from "lucide-react"
 
 import { cn } from "@/lib/utils"
 import {
@@ -48,7 +49,26 @@ function RadioGroupItem({
 }: React.ComponentPropsWithoutRef<typeof ShadcnRadioGroupItem> & {
   variant?: VariantProps<typeof radioGroupVariants>["variant"]
 }) {
-  return <ShadcnRadioGroupItem className={cn("", className)} {...props} />
+  return (
+    <div className="relative size-max">
+      <ShadcnRadioGroupItem
+        className={cn("rounded-none border-2", pressStart.className, className)}
+        {...props}
+      >
+        <Square />
+      </ShadcnRadioGroupItem>
+      <div className="absolute top-[1px] w-2.5 left-1.5 h-1 bg-foreground dark:bg-ring" />
+      <div className="absolute top-[1px] w-2.5 right-1.5 h-1 bg-foreground dark:bg-ring" />
+      <div className="absolute bottom-0 w-2.5 left-1.5 h-1 bg-foreground dark:bg-ring" />
+      <div className="absolute bottom-0 w-2.5 right-1.5 h-1 bg-foreground dark:bg-ring" />
+      <div className="absolute top-[5px] -left-1 w-1 h-[15px] bg-foreground dark:bg-ring" />
+      <div className="absolute top-[5px] -right-1 w-1 h-[15px] bg-foreground dark:bg-ring" />
+      <div className="absolute top-[3px] -right-0.5 w-1 h-1 bg-foreground dark:bg-ring" />
+      <div className="absolute top-[3px] -left-0.5 w-1 h-1 bg-foreground dark:bg-ring" />
+      <div className="absolute bottom-[1px] -right-0.5 w-1 h-1 bg-foreground dark:bg-ring" />
+      <div className="absolute bottom-[1px] -left-0.5 w-1 h-1 bg-foreground dark:bg-ring" />
+    </div>
+  )
 }
 
 export { RadioGroup, RadioGroupItem }

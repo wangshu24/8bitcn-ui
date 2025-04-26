@@ -3,7 +3,7 @@ import type { Metadata } from "next"
 
 import { radioGroupMetaData } from "@/lib/metadata"
 import { Label } from "@/components/ui/8bit/label"
-import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
+import { RadioGroup, RadioGroupItem } from "@/components/ui/8bit/radio-group"
 import { Separator } from "@/components/ui/separator"
 import CodeSnippet from "@/app/docs/components/code-snippet"
 import CopyCommandButton from "@/app/docs/components/copy-command-button"
