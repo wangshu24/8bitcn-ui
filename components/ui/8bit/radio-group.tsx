@@ -52,21 +52,25 @@ function RadioGroupItem({
   return (
     <div className="relative size-max">
       <ShadcnRadioGroupItem
-        className={cn("rounded-none border-2", pressStart.className, className)}
+        className={cn(
+          "rounded-none size-4 ring-0 border-none",
+          pressStart.className,
+          className
+        )}
         {...props}
       >
         <Square />
       </ShadcnRadioGroupItem>
-      <div className="absolute top-[1px] w-2.5 left-1.5 h-1 bg-foreground dark:bg-ring" />
-      <div className="absolute top-[1px] w-2.5 right-1.5 h-1 bg-foreground dark:bg-ring" />
-      <div className="absolute bottom-0 w-2.5 left-1.5 h-1 bg-foreground dark:bg-ring" />
-      <div className="absolute bottom-0 w-2.5 right-1.5 h-1 bg-foreground dark:bg-ring" />
-      <div className="absolute top-[5px] -left-1 w-1 h-[15px] bg-foreground dark:bg-ring" />
-      <div className="absolute top-[5px] -right-1 w-1 h-[15px] bg-foreground dark:bg-ring" />
-      <div className="absolute top-[3px] -right-0.5 w-1 h-1 bg-foreground dark:bg-ring" />
-      <div className="absolute top-[3px] -left-0.5 w-1 h-1 bg-foreground dark:bg-ring" />
-      <div className="absolute bottom-[1px] -right-0.5 w-1 h-1 bg-foreground dark:bg-ring" />
-      <div className="absolute bottom-[1px] -left-0.5 w-1 h-1 bg-foreground dark:bg-ring" />
+      <div className="absolute top-[0px] w-2.5 left-1.5 h-1 bg-foreground dark:bg-ring" />
+      <div className="absolute top-[0px] w-2.5 right-1.5 h-1 bg-foreground dark:bg-ring" />
+      <div className="absolute bottom-[1px] w-2.5 left-1.5 h-1 bg-foreground dark:bg-ring" />
+      <div className="absolute bottom-[1px] w-2.5 right-1.5 h-1 bg-foreground dark:bg-ring" />
+      <div className="absolute top-[4px] -left-1 w-1 h-[15px] bg-foreground dark:bg-ring" />
+      <div className="absolute top-[4px] -right-1 w-1 h-[15px] bg-foreground dark:bg-ring" />
+      <div className="absolute top-[2px] -right-0.5 w-1 h-1 bg-foreground dark:bg-ring" />
+      <div className="absolute top-[2px] -left-0.5 w-1 h-1 bg-foreground dark:bg-ring" />
+      <div className="absolute bottom-[2px] -right-0.5 w-1 h-1 bg-foreground dark:bg-ring" />
+      <div className="absolute bottom-[2px] -left-0.5 w-1 h-1 bg-foreground dark:bg-ring" />
     </div>
   )
 }

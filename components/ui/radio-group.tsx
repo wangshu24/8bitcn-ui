@@ -2,7 +2,6 @@
 
 import * as React from "react"
 import * as RadioGroupPrimitive from "@radix-ui/react-radio-group"
-import { Square } from "lucide-react"
 
 import { cn } from "@/lib/utils"
 
@@ -30,7 +29,7 @@ const RadioGroupItem = React.forwardRef<
     <RadioGroupPrimitive.Item
       ref={ref}
       className={cn(
-        "aspect-square h-4 w-4 rounded-full border border-primary text-primary ring-offset-background focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50",
+        "peer border-input dark:bg-input/30 data-[state=checked]:bg-primary data-[state=checked]:text-primary-foreground dark:data-[state=checked]:bg-primary data-[state=checked]:border-primary focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive size-4 shrink-0 rounded-[4px] border shadow-xs transition-shadow outline-none focus-visible:ring-[3px] disabled:cursor-not-allowed disabled:opacity-50",
         className
       )}
       {...props}
@@ -38,14 +37,14 @@ const RadioGroupItem = React.forwardRef<
       <RadioGroupPrimitive.Indicator
         className={cn("flex items-center justify-center", className)}
       >
-        <Square
-          className={cn(
-            "round-none h-2.5 w-2.5 fill-current text-current",
-            className
-          )}
-          strokeLinecap="square"
-          strokeLinejoin="inherit"
-        />
+        <svg
+          viewBox="0 0 256 256"
+          xmlns="http://www.w3.org/2000/svg"
+          className="raster-icon size-3.5"
+          aria-label="square"
+        >
+          <rect x="40" y="45" width="180" height="180" rx="0" />
+        </svg>
       </RadioGroupPrimitive.Indicator>
     </RadioGroupPrimitive.Item>
   )
