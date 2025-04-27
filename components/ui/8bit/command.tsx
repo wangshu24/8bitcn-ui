@@ -4,6 +4,7 @@ import { Press_Start_2P } from "next/font/google"
 import { Command as CommandPrimitive } from "cmdk"
 
 import { cn } from "@/lib/utils"
+import { Separator } from "@/components/ui/8bit/separator"
 import {
   Command as ShadcnCommand,
   CommandDialog as ShadcnCommandDialog,
@@ -142,7 +143,7 @@ function CommandList({
     <ShadcnCommandList
       data-slot="command-list"
       className={cn(
-        "max-h-[300px] scroll-py-1 overflow-x-hidden overflow-y-auto",
+        "max-h-[320px] scroll-py-1 overflow-x-hidden overflow-y-auto",
         pressStart.className,
         className
       )}
@@ -187,9 +188,15 @@ function CommandSeparator({
   return (
     <ShadcnCommandSeparator
       data-slot="command-separator"
-      className={cn("bg-border -mx-1 h-px", pressStart.className, className)}
+      className={cn(
+        "data-[orientation=horizontal]:bg-[length:16px_8px] data-[orientation=horizontal]:bg-[linear-gradient(90deg,var(--foreground)_75%,transparent_75%)] dark:data-[orientation=horizontal]:bg-[linear-gradient(90deg,var(--ring)_75%,transparent_75%)] shrink-0 data-[orientation=horizontal]:h-0.5 data-[orientation=horizontal]:w-full data-[orientation=vertical]:h-full data-[orientation=vertical]:w-0.5 data-[orientation=vertical]:bg-[length:2px_16px] data-[orientation=vertical]:bg-[linear-gradient(0deg,var(--foreground)_75%,transparent_75%)] dark:data-[orientation=vertical]:bg-[linear-gradient(0deg,var(--ring)_75%,transparent_75%)]",
+        pressStart.className,
+        className
+      )}
       {...props}
-    />
+    >
+      <Separator />
+    </ShadcnCommandSeparator>
   )
 }
 
@@ -201,7 +208,7 @@ function CommandItem({
     <ShadcnCommandItem
       data-slot="command-item"
       className={cn(
-        "rounded-none border-t border-b border-dashed border-ring/0 hover:border-foreground dark:hover:border-ring",
+        "rounded-none border-t border-b border-dashed border-y-4 border-ring/0 hover:border-foreground dark:hover:border-ring",
         className
       )}
       {...props}
