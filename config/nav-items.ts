@@ -122,6 +122,11 @@ export const navItems = {
           url: "/docs/components/separator",
         },
         {
+          title: "Radio Group",
+          url: "/docs/components/radio-group",
+          new: true,
+        },
+        {
           title: "Resizable",
           url: "/docs/components/resizable",
           new: true,
