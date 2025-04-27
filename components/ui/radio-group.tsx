@@ -39,11 +39,18 @@ const RadioGroupItem = React.forwardRef<
       >
         <svg
           viewBox="0 0 256 256"
+          fill="currentColor"
           xmlns="http://www.w3.org/2000/svg"
-          className="raster-icon size-3.5"
+          stroke="currentColor"
+          stroke-width="0"
+          className="raster-icon h-3.5 w-2.5"
           aria-label="square"
         >
-          <rect x="40" y="45" width="180" height="180" rx="0" />
+          <rect x="30" y="35" width="200" height="200" rx="0" />
+          <rect x="80" y="5" width="100" height="200" rx="0" />
+          <rect x="0" y="85" width="100" height="100" rx="0" />
+          <rect x="80" y="65" width="100" height="200" rx="0" />
+          <rect x="200" y="85" width="100" height="100" rx="0" />
         </svg>
       </RadioGroupPrimitive.Indicator>
     </RadioGroupPrimitive.Item>
