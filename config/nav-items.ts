@@ -8,6 +8,10 @@ export const navItems = {
       label: "Components",
       href: "/docs/components/alert",
     },
+    {
+      label: "Blocks",
+      href: "/blocks",
+    },
   ],
   navMain: [
     {
@@ -49,6 +53,11 @@ export const navItems = {
         {
           title: "Carousel",
           url: "/docs/components/carousel",
+        },
+        {
+          title: "Chart",
+          url: "/docs/components/chart",
+          new: true,
         },
         {
           title: "Checkbox",
