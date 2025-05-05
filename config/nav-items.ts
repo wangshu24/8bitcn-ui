@@ -98,6 +98,11 @@ export const navItems = {
           url: "/docs/components/input-otp",
         },
         {
+          title: "Scroll Area",
+          url: "/docs/components/scroll-area",
+          new: true,
+        },
+        {
           title: "Select",
           url: "/docs/components/select",
         },
