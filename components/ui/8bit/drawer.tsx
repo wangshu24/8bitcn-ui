@@ -1,4 +1,5 @@
 import { Press_Start_2P } from "next/font/google"
+// import { cva, VariantProps } from "class-variance-authority"
 import { Drawer as DrawerPrimitive } from "vaul"
 
 import { cn } from "@/lib/utils"
@@ -26,10 +27,6 @@ const DrawerPortal = ShadcnDrawerPortal
 
 const DrawerOverlay = ShadcnDrawerOverlay
 
-const DrawerHeader = ShadcnDrawerHeader
-
-const DrawerFooter = ShadcnDrawerFooter
-
 const DrawerClose = ShadcnDrawerClose
 
 const DrawerTitle = ShadcnDrawerTitle
@@ -42,9 +39,18 @@ function DrawerTrigger({
   ...props
 }: React.ComponentProps<typeof DrawerPrimitive.Trigger>) {
   return (
-    <ShadcnDrawerTrigger className={cn("", className, pressStart)} {...props}>
-      {children}
-    </ShadcnDrawerTrigger>
+    <>
+      <ShadcnDrawerTrigger
+        className={cn(
+          "rounded-none border-4 dark:focus:border-ring",
+          className,
+          pressStart.className
+        )}
+        {...props}
+      >
+        {children}
+      </ShadcnDrawerTrigger>
+    </>
   )
 }
 
@@ -54,9 +60,42 @@ function DrawerContent({
   ...props
 }: React.ComponentProps<typeof DrawerPrimitive.Content>) {
   return (
-    <ShadcnDrawerContent className={cn("", className, pressStart)} {...props}>
+    <ShadcnDrawerContent
+      className={cn("", className, pressStart.className)}
+      {...props}
+    >
       {children}
     </ShadcnDrawerContent>
+  )
+}
+
+function DrawerHeader({
+  className,
+  children,
+  ...props
+}: React.ComponentProps<"div">) {
+  return (
+    <ShadcnDrawerHeader
+      className={cn("", className, pressStart.className)}
+      {...props}
+    >
+      {children}
+    </ShadcnDrawerHeader>
+  )
+}
+
+function DrawerFooter({
+  className,
+  children,
+  ...props
+}: React.ComponentProps<"div">) {
+  return (
+    <ShadcnDrawerFooter
+      className={cn("", className, pressStart.className)}
+      {...props}
+    >
+      {children}
+    </ShadcnDrawerFooter>
   )
 }
 
