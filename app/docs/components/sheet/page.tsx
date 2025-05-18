@@ -66,7 +66,7 @@ export default function SheetPage() {
             <SheetTrigger asChild>
               <Button variant="outline">Open</Button>
             </SheetTrigger>
-            <SheetContent>
+            <SheetContent side="top">
               <SheetHeader>
                 <SheetTitle>Edit profile</SheetTitle>
                 <SheetDescription className="text-xs">

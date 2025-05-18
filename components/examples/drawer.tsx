@@ -70,7 +70,7 @@ export function DrawerExample() {
       <DrawerTrigger asChild>
         <Button variant="outline">Open Drawer</Button>
       </DrawerTrigger>
-      <DrawerContent>
+      <DrawerContent side="top">
         <div className="mx-auto w-full max-w-sm">
           <DrawerHeader>
             <DrawerTitle>Move Goal</DrawerTitle>
