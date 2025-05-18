@@ -53,7 +53,6 @@ function DrawerDescription({
       className={cn(className, pressStart.className)}
       {...props}
     >
-      {" "}
       {children}
     </ShadcnDrawerDescription>
   )
@@ -68,7 +67,7 @@ function DrawerTrigger({
     <>
       <ShadcnDrawerTrigger
         className={cn(
-          "hover:bg-transparent active:bg-transparent focus:bg-transparent rounded-none border-4 focus:border-foreground hover:border-foreground dark:focus:border-ring bg-transparent data-[state=open]:bg-transparent data-[state=open]:border-foreground dark:data-[state=open]:border-ring",
+          "border-foreground dark:border-ring hover:bg-transparent active:bg-transparent focus:bg-transparent rounded-none border-4 focus:border-foreground hover:border-foreground dark:focus:border-ring bg-transparent data-[state=open]:bg-transparent data-[state=open]:border-foreground dark:data-[state=open]:border-ring",
           className,
           pressStart.className
         )}
