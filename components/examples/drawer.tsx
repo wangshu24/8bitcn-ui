@@ -114,7 +114,7 @@ export function DrawerExample() {
                     dataKey="goal"
                     style={
                       {
-                        fill: "hsl(var(--foreground))",
+                        fill: "white",
                         opacity: 0.9,
                       } as React.CSSProperties
                     }

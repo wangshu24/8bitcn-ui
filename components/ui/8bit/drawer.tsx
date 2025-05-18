@@ -1,5 +1,4 @@
 import { Press_Start_2P } from "next/font/google"
-// import { cva, VariantProps } from "class-variance-authority"
 import { Drawer as DrawerPrimitive } from "vaul"
 
 import { cn } from "@/lib/utils"
@@ -29,9 +28,36 @@ const DrawerOverlay = ShadcnDrawerOverlay
 
 const DrawerClose = ShadcnDrawerClose
 
-const DrawerTitle = ShadcnDrawerTitle
+function DrawerTitle({
+  className,
+  children,
+  ...props
+}: React.ComponentProps<typeof DrawerPrimitive.Title>) {
+  return (
+    <ShadcnDrawerTitle
+      className={cn(className, pressStart.className)}
+      {...props}
+    >
+      {children}
+    </ShadcnDrawerTitle>
+  )
+}
 
-const DrawerDescription = ShadcnDrawerDescription
+function DrawerDescription({
+  className,
+  children,
+  ...props
+}: React.ComponentProps<typeof DrawerPrimitive.Description>) {
+  return (
+    <ShadcnDrawerDescription
+      className={cn(className, pressStart.className)}
+      {...props}
+    >
+      {" "}
+      {children}
+    </ShadcnDrawerDescription>
+  )
+}
 
 function DrawerTrigger({
   className,
@@ -42,7 +68,7 @@ function DrawerTrigger({
     <>
       <ShadcnDrawerTrigger
         className={cn(
-          "rounded-none border-4 dark:focus:border-ring",
+          "hover:bg-transparent active:bg-transparent focus:bg-transparent rounded-none border-4 focus:border-foreground hover:border-foreground dark:focus:border-ring bg-transparent data-[state=open]:bg-transparent data-[state=open]:border-foreground dark:data-[state=open]:border-ring",
           className,
           pressStart.className
         )}
