@@ -4,6 +4,7 @@ import * as React from "react"
 import { Minus, Plus } from "lucide-react"
 import { Bar, BarChart, ResponsiveContainer } from "recharts"
 
+import { Button } from "@/components/ui/8bit/button"
 import {
   Drawer,
   DrawerClose,
@@ -14,7 +15,6 @@ import {
   DrawerTitle,
   DrawerTrigger,
 } from "@/components/ui/8bit/drawer"
-import { Button } from "@/components/ui/button"
 
 const data = [
   {
@@ -67,10 +67,10 @@ export function DrawerExample() {
 
   return (
     <Drawer>
-      <DrawerTrigger asChild>
+      <DrawerTrigger asChild className="border-none">
         <Button variant="outline">Open Drawer</Button>
       </DrawerTrigger>
-      <DrawerContent side="top">
+      <DrawerContent side="bottom">
         <div className="mx-auto w-full max-w-sm">
           <DrawerHeader>
             <DrawerTitle>Move Goal</DrawerTitle>
@@ -81,7 +81,7 @@ export function DrawerExample() {
               <Button
                 variant="outline"
                 size="icon"
-                className="h-8 w-8 shrink-0 rounded-full"
+                className="size-10 shrink-0"
                 onClick={() => onClick(-10)}
                 disabled={goal <= 200}
               >
@@ -89,7 +89,7 @@ export function DrawerExample() {
                 <span className="sr-only">Decrease</span>
               </Button>
               <div className="flex-1 text-center">
-                <div className="text-7xl font-bold tracking-tighter">
+                <div className="text-3xl sm:text-7xl font-bold tracking-tighter">
                   {goal}
                 </div>
                 <div className="text-[0.70rem] uppercase text-muted-foreground">
@@ -99,7 +99,7 @@ export function DrawerExample() {
               <Button
                 variant="outline"
                 size="icon"
-                className="h-8 w-8 shrink-0 rounded-full"
+                className="size-10 shrink-0"
                 onClick={() => onClick(10)}
                 disabled={goal >= 400}
               >
@@ -123,7 +123,7 @@ export function DrawerExample() {
               </ResponsiveContainer>
             </div>
           </div>
-          <DrawerFooter>
+          <DrawerFooter className="flex flex-col gap-5">
             <Button>Submit</Button>
             <DrawerClose asChild>
               <Button variant="outline">Cancel</Button>
