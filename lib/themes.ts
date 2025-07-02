@@ -5,6 +5,7 @@ export enum Theme {
   Atari = "atari",
   Nintendo = "nintendo",
   Arcade = "arcade",
+  NeoGeo = "neo-geo",
 }
 
 const themes = [
@@ -364,7 +365,7 @@ const themes = [
   },
   {
     name: Theme.Arcade,
-    color: `:root {
+    color: `.theme-arcade {
   --radius: 0rem;
   --primary: oklch(0.7 0.25 320);
   --primary-foreground: oklch(0.1 0.05 320);
@@ -397,10 +398,9 @@ const themes = [
   --sidebar-accent-foreground: oklch(0.1 0.05 220);
   --sidebar-border: oklch(0.7 0.25 320);
   --sidebar-ring: oklch(0.7 0.25 320);
-}
 
-.dark {
-  --primary: oklch(0.8 0.3 320);
+  @variant dark {
+    --primary: oklch(0.8 0.3 320);
     --primary-foreground: oklch(0.05 0.02 320);
     --background: oklch(0.02 0.01 280);
     --foreground: oklch(0.98 0.01 280);
@@ -417,7 +417,7 @@ const themes = [
     --destructive: oklch(0.8 0.35 20);
     --border: oklch(0.8 0.3 320);
     --input: oklch(0.1 0.03 280);
-    --ring: oklch(0.8 0.3 320);
+    --ring: oklch(0.6 0.25 320);
     --chart-1: oklch(0.8 0.3 320);
     --chart-2: oklch(0.7 0.25 220);
     --chart-3: oklch(0.9 0.3 60);
@@ -431,6 +431,78 @@ const themes = [
     --sidebar-accent-foreground: oklch(0.05 0.02 220);
     --sidebar-border: oklch(0.8 0.3 320);
     --sidebar-ring: oklch(0.8 0.3 320);
+  }
+}`,
+  },
+  {
+    name: Theme.NeoGeo,
+    color: `.theme-neo-geo {
+  --radius: 0rem;
+  --primary: oklch(0.65 0.25 25);
+  --primary-foreground: oklch(0.98 0.01 25);
+  --background: oklch(0.98 0.03 25);
+  --foreground: oklch(0.15 0.05 25);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.15 0.05 25);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.15 0.05 25);
+  --secondary: oklch(0.9 0.02 25);
+  --secondary-foreground: oklch(0.15 0.05 25);
+  --muted: oklch(0.95 0.01 25);
+  --muted-foreground: oklch(0.45 0.1 25);
+  --accent: oklch(0.75 0.2 25);
+  --accent-foreground: oklch(0.98 0.01 25);
+  --destructive: oklch(0.7 0.3 20);
+  --border: oklch(0.8 0.1 25);
+  --input: oklch(0.95 0.01 25);
+  --ring: oklch(0.65 0.25 25);
+  --chart-1: oklch(0.65 0.25 25);
+  --chart-2: oklch(0.45 0.2 25);
+  --chart-3: oklch(0.8 0.15 25);
+  --chart-4: oklch(0.6 0.25 25);
+  --chart-5: oklch(0.7 0.2 25);
+  --sidebar: oklch(0.96 0.01 25);
+  --sidebar-foreground: oklch(0.15 0.05 25);
+  --sidebar-primary: oklch(0.65 0.25 25);
+  --sidebar-primary-foreground: oklch(0.98 0.01 25);
+  --sidebar-accent: oklch(0.9 0.02 25);
+  --sidebar-accent-foreground: oklch(0.15 0.05 25);
+  --sidebar-border: oklch(0.8 0.1 25);
+  --sidebar-ring: oklch(0.65 0.25 25);
+
+  @variant dark {
+    --primary: oklch(0.75 0.3 25);
+    --primary-foreground: oklch(0.05 0.02 25);
+    --background: oklch(0.05 0.02 25);
+    --foreground: oklch(0.95 0.01 25);
+    --card: oklch(0.1 0.03 25);
+    --card-foreground: oklch(0.95 0.01 25);
+    --popover: oklch(0.1 0.03 25);
+    --popover-foreground: oklch(0.95 0.01 25);
+    --secondary: oklch(0.15 0.05 25);
+    --secondary-foreground: oklch(0.95 0.01 25);
+    --muted: oklch(0.15 0.05 25);
+    --muted-foreground: oklch(0.7 0.1 25);
+    --accent: oklch(0.2 0.08 25);
+    --accent-foreground: oklch(0.95 0.01 25);
+    --destructive: oklch(0.8 0.35 20);
+    --border: oklch(0.2 0.08 25);
+    --input: oklch(0.15 0.05 25);
+    --ring: oklch(0.55 0.25 25);
+    --chart-1: oklch(0.75 0.3 25);
+    --chart-2: oklch(0.55 0.25 25);
+    --chart-3: oklch(0.85 0.2 25);
+    --chart-4: oklch(0.65 0.3 25);
+    --chart-5: oklch(0.75 0.25 25);
+    --sidebar: oklch(0.08 0.03 25);
+    --sidebar-foreground: oklch(0.95 0.01 25);
+    --sidebar-primary: oklch(0.75 0.3 25);
+    --sidebar-primary-foreground: oklch(0.05 0.02 25);
+    --sidebar-accent: oklch(0.15 0.05 25);
+    --sidebar-accent-foreground: oklch(0.95 0.01 25);
+    --sidebar-border: oklch(0.2 0.08 25);
+    --sidebar-ring: oklch(0.75 0.3 25);
+  }
 }`,
   },
 ];
