@@ -2,11 +2,9 @@ import {
   Activity,
   AlertTriangle,
   Info,
-  Pause,
-  Play,
   Sword,
   Users,
-  Volume2,
+  Wand,
 } from "lucide-react";
 
 import {
@@ -17,7 +15,6 @@ import {
 import { Badge } from "@/components/ui/8bit/badge";
 import AudioSettings from "@/components/ui/8bit/blocks/audio-settings";
 import { LoginForm } from "@/components/ui/8bit/blocks/login-form";
-import { Button } from "@/components/ui/8bit/button";
 import {
   Card,
   CardContent,
@@ -35,8 +32,6 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/8bit/select";
-import { Slider } from "@/components/ui/8bit/slider";
-import { Switch } from "@/components/ui/8bit/switch";
 import {
   Tabs,
   TabsContent,
@@ -56,6 +51,8 @@ export default function ComponentShowcase() {
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-10">
       {/* Column 1 */}
       <div className="flex flex-col gap-4">
+        <AudioSettings />
+
         <MainMenu />
 
         <Alert>
@@ -96,19 +93,6 @@ export default function ComponentShowcase() {
             <div className="text-2xl font-bold">+2350</div>
             <p className="text-xs text-muted-foreground">
               +180.1% from last month
-            </p>
-          </CardContent>
-        </Card>
-
-        <Card>
-          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium">Warriors</CardTitle>
-            <Sword className="size-4 text-muted-foreground" />
-          </CardHeader>
-          <CardContent>
-            <div className="text-2xl font-bold">+100</div>
-            <p className="text-xs text-muted-foreground">
-              +100 since last month
             </p>
           </CardContent>
         </Card>
@@ -213,42 +197,6 @@ export default function ComponentShowcase() {
 
       {/* Column 3 */}
       <div className="flex flex-col gap-4 w-full">
-        <AudioSettings />
-
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-sm font-medium">Game Controls</CardTitle>
-          </CardHeader>
-          <CardContent className="space-y-5">
-            <div className="flex gap-5">
-              <Button variant="default" size="sm">
-                <Play className="size-4" />
-                Start
-              </Button>
-              <Button variant="secondary" size="sm">
-                <Pause className="size-4" />
-                Pause
-              </Button>
-            </div>
-            <div className="flex gap-5">
-              <Button variant="outline" size="sm">
-                Settings
-              </Button>
-              <Button variant="destructive" size="sm">
-                Quit
-              </Button>
-            </div>
-            <div className="flex gap-2">
-              <Button variant="ghost" size="sm">
-                Help
-              </Button>
-              <Button variant="default" size="icon">
-                <Volume2 className="size-4" />
-              </Button>
-            </div>
-          </CardContent>
-        </Card>
-
         <Card>
           <CardHeader>
             <CardTitle>Product Status</CardTitle>
@@ -324,6 +272,32 @@ export default function ComponentShowcase() {
               <Checkbox id="hardcore" />
               <Label htmlFor="hardcore">Hardcore mode</Label>
             </div>
+          </CardContent>
+        </Card>
+
+        <Card>
+          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+            <CardTitle className="text-sm font-medium">Warriors</CardTitle>
+            <Sword className="size-4 text-muted-foreground" />
+          </CardHeader>
+          <CardContent>
+            <div className="text-2xl font-bold">+100</div>
+            <p className="text-xs text-muted-foreground">
+              +100 since last month
+            </p>
+          </CardContent>
+        </Card>
+
+        <Card>
+          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+            <CardTitle className="text-sm font-medium">Wizards</CardTitle>
+            <Wand className="size-4 text-muted-foreground" />
+          </CardHeader>
+          <CardContent>
+            <div className="text-2xl font-bold">+1000</div>
+            <p className="text-xs text-muted-foreground">
+              +1000 since last month
+            </p>
           </CardContent>
         </Card>
       </div>
